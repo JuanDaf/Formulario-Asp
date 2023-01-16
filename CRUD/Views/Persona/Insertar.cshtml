@@ -1,0 +1,49 @@
+﻿@model Persona
+
+<div class="row">
+   
+        <h2 class="">
+            Formulario Personas 
+        </h2>
+           
+         <div class="container-fluid align-content-center">
+        
+              <form asp-action="Insertar" asp-controller="Persona" method="post">
+                 <div class="row ">
+                    <div class="col-12 align-self-center">
+                        <div class="form-floating mb-3 col-md-5">
+                        <input type="text"  asp-for="Cedula" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Cedula</label>
+                        <span asp-validation-for="Cedula" class="text-danger" ></span >
+                        </div>
+                        <div class="form-floating mb-3 col-md-5">
+                        <input type="text" asp-for="Nombres" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Nombres</label>
+                        <span asp-validation-for="Nombres" class="text-danger" ></span >
+                        </div>
+                    </div>
+                 </div>
+                 <div class="row ">
+                     <div class="col-12 align-self-center">
+                         <div class="form-floating mb-3 col-md-5">
+                         <input type="text" asp-for="Apellidos" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Apellidos</label>
+                        <span asp-validation-for="Apellidos" class="text-danger" ></span >
+                         </div>
+                         <div class="form-floating mb-3 col-md-5">
+                        <input type="text" asp-for="Direccion" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput">Dirección</label>
+                        <span asp-validation-for="Direccion" class="text-danger" ></span >
+                        </div>
+                     </div>
+
+                 </div>
+                 <div class="d-grid gap-2 col-5">
+                 <button type="submit" class="btn btn-primary" >Guardar</button>
+                 <a asp-action="Index" asp-controller="Persona"class="btn btn-warning" >Volver a la lista</a>
+                 </div>
+              </form>
+         
+         </div>
+ 
+</div>
